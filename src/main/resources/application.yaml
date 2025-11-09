@@ -1,0 +1,22 @@
+server:
+  address: 0.0.0.0
+  port: 8081
+spring:
+  application:
+    name: short-url-resolve
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/shorturl?useSSL=false&serverTimezone=UTC&allowPublicKeyRetrieval=true
+    username: root
+    password: 123456
+  jackson:
+    default-property-inclusion: non_null
+  data:
+    redis:
+      host: localhost
+      port: 6379
+mybatis-plus:
+  type-aliases-package: io.github.fengnkt.shorturl.entity
+logging:
+  level:
+    io.github.fengnkt.shorturl: debug
